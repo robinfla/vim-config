@@ -1,0 +1,71 @@
+set termguicolors
+set background=dark
+colorscheme molokai
+set listchars=eol:¬,tab:\|\ ,trail:.,extends:>,precedes:<
+set list
+highlight Pmenu ctermbg=gray guibg=gray
+set undofile
+set undodir=$HOME/.vim/undo
+set mouse=
+set backupcopy=yes
+let g:vim_jsx_pretty_colorful_config = 1
+let g:prettier#config#bracket_spacing = 'true'
+" let g:enable_bold_font = 1
+let g:sql_type_default = 'pgsql'
+
+let g:user_emmet_settings = {
+      \  'javascript.jsx' : {
+      \      'extends' : 'jsx',
+      \  },
+      \}
+set nohlsearch
+set shiftwidth=2
+set expandtab
+set softtabstop=2
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size= 1
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=darkgrey
+autocmd VimEnter * IndentGuidesToggle
+
+filetype plugin on
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ deoplete#mappings#manual_complete()
+function! s:check_back_space() abort "{{{
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
+
+let g:lua_compiler_name = '/usr/local/bin/luac'
+let g:lua_complete_omni = 1
+" let b:lua_compiler_name = '/usr/local/bin/lualint'
+set completefunc=emoji#complete
+set signcolumn=yes
+
+" == fixmyjs ==
+let g:fixmyjs_engine = 'eslint'
+
+" == vim-airline ==
+let g:airline#extensions#tabline#enabled = 1
+
+" == Keybindings ===
+imap <C-Return> <CR><CR><C-o>k<Tab>
+command W :w
+noremap <C-p> :bprev<CR>
+noremap <C-n> :bnext<CR>
+vnoremap <C-n> :Commentary<CR>
+nnoremap <Leader>q :Bdelete<CR>
+nnoremap <C-C> :Fixmyjs<CR>
+noremap tt :tab split<CR>
+
+" == mileszs/ack.vim ==
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+cnoreabbrev ag Ack!
+nnoremap <Leader>a :Ack!<Space>
+
+autocmd FileType typescript :let g:fixmyjs_engine = 'tslint'

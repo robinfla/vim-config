@@ -1,0 +1,31 @@
+Plug 'vim-scripts/lua.vim--Ko'
+Plug 'nanotech/jellybeans.vim'
+Plug 'kadekillary/Turtles'
+Plug 'tomasr/molokai'
+Plug 'digitaltoad/vim-pug'
+Plug 'xolox/vim-misc'
+Plug 'moll/vim-bbye'
+Plug 'groenewege/vim-less'
+Plug 'fatih/vim-go'
+Plug 'jparise/vim-graphql'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'npm install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+Plug 'ruanyl/vim-fixmyjs'
+Plug 'kshenoy/vim-signature'
+Plug 'spacewander/openresty-vim'
+Plug 'junegunn/vim-emoji'
+Plug 'alunny/pegjs-vim'
+Plug 'sebdah/vim-delve'
+Plug 'vim-scripts/SQLComplete.vim'
+Plug 'exu/pgsql.vim'
+Plug 'wannesm/wmgraphviz.vim'
+Plug 'cespare/vim-toml'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'posva/vim-vue'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'leafgarland/typescript-vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'vim-airline/vim-airline'
+Plug 'mileszs/ack.vim'
