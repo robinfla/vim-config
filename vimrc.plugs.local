@@ -29,3 +29,4 @@ Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'vim-airline/vim-airline'
 Plug 'mileszs/ack.vim'
+Plug 'othree/xml.vim'

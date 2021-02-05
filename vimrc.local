@@ -61,6 +61,9 @@ nnoremap <C-C> :Fixmyjs<CR>
 noremap tt :tab split<CR>
 
 " == mileszs/ack.vim ==
+let g:go_version_warning = 0
+
+" == mileszs/ack.vim ==
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
